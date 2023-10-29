@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: "Poppins",sans-serif;
+    color: white;
+    background-color: rgb(168, 225, 244);
+}
+.header{
+    background-color: rgb(4, 4, 36);
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+    box-shadow: 0px 0px 14px rgb(233, 193, 193);
+    z-index: 1;
+    
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+    animation:slideLeft 1s ease-in-out;
+}
+.navbar a{
+    text-decoration: none;   
+    color: #fff;
+    display: inline-block;
+    padding: 0px 16px;
+    font-weight: 600;
+    transition: 0.3s all; 
+    animation:navMenu 1s forwards;
+    animation-delay: calc(0.1s *var(--i)); 
+    opacity: 100;
+}
+.navbar a:hover ,
+.navbar .active{
+    color: rgb(100, 224, 51);
+}
+.my-container{
+    margin-top: 3.5rem;
+    background-color: rgb(21, 3, 7);
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-side h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    transition: 0.3s all;
+    animation: headingUp 1s both ;
+}
+.info-side h1{
+    position: relative;
+    color: #222;
+    font-size: 4.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.info-side h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    color: rgb(224, 16, 165);
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+
+}
+@keyframes animate
+{
+    0%
+    {
+        width: 0;
+    }
+    100%
+    {
+        width: 100%;
+    }
+}
+.info-side h3 span{
+    color: blueviolet;
+}
+p{
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+    transition: 0.3s all;
+    animation:paraRight 1s forwards;
+}
+
+.my-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.my-img img{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.my-img img:hover{
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+.MiniProject
+{
+    text-align: justify;
+    margin: 40px;
+    padding: 100px;
+}
+i{
+    position: relative;
+    border: 2px solid rgb(187, 166, 206);
+    padding: 10px;
+    border-radius: 50%;
+    color: rgb(221, 232, 234);
+    margin: 0rem 0.5rem;
+    transition: 0.3ms;
+    animation: navMenu 1s forwards ;
+    animation-delay: calc(var(--i)* 10ms);
+}
+i:hover{
+    box-shadow: 0px 0px 20px rgb(19, 59, 153);
+}
+button{
+    background-color: #0ef;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0px 0px 1.9rem rgb(220, 249, 146);
+    animation: btnAnimation 1s backwards;
+}
+button:hover{
+    box-shadow: none;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navMenu {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    } 
+     100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes headingUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    } 
+     100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes paraRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    } 
+     100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes btnAnimation {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 0;
+    }
+}
+@keyframes aboutUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    } 
+     100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.aboutme-container, .skills-container, .contact-container{
+    background-color: rgba(80, 205, 13, 0.41);
+    padding-top: 4rem;
+
+}
+.aboutme-container > h2,.skills-container > h2, .contact-container> h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+.about-me, .skills, contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.about-me > p, .skills > p{
+    width: 50vw;
+}
+.about-img-container, .skills-img-container{
+    height: 26%;
+    width: 47%;
+    display: flex;
+    justify-content: center;
+}
+.about-img-container > img {
+width: 50%;
+border-radius: 1rem;
+}
+.progress-section {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    background: rgb(3, 25, 29);
+    padding: 1rem 2rem;
+    margin: 0 auto;
+
+    .task-progress {
+      margin: 1.5rem 0;
+    }
+  
+    .task-progress p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #061e43;
+      width: 100%;
+    }
+  
+    span {
+      color: #b4d90f;
+    }
+  
+    .progress {
+        border-radius: 10px;
+        height: 10px;
+        width: 32rem;
+    }
+  }
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+.contact-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-form > input{
+    padding: 0.8rem;
+    width: 30rem;
+    border-radius: 1rem;
+    background: #a959f39a;
+    margin-bottom: 0.2rem;
+    color: rgb(138, 20, 77);
+    font-family: "Poppins",sans-serif;
+}
+.contact-container{
+    margin-bottom: 2rem;
+}
+.contact-form > textarea{
+    padding: 0.8rem;
+    border-radius: 1rem;
+    background: #f0068b9a;
+    width: 30rem;
+    height: 10rem;
+    color: rgb(245, 3, 112);
+    font-family: "Poppins",sans-serif;
+}
+#submit-btn{
+    background-color: rgb(127, 18, 228);
+    color: rgb(227, 42, 116);
+    margin-top: 1rem;
+    width: 5rem;
+    margin: auto;
+    box-shadow: 0px 0px 5px rgb(159, 227, 232);
+}
+#submit-btn:hover{
+    cursor: pointer;
+    color: blueviolet;
+    background-color: white;
+    transition: 0.3s all ease-in-out;
+}
+::placeholder{
+    color: rgb(96, 189, 20);
+}
+.contact-form > input:focus, .contact-form > textarea:focus{
+    color: blueviolet;
+    margin-top: auto;
+    margin-top: auto;
+    background-color: rgb(107, 52, 52);
+    
+}
+.cpy{
+    color: rgb(244, 244, 127);
+    text-align: right;
+}

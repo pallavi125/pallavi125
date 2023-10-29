@@ -1,2 +1,1 @@
-#pallavi125
-#this is my porfolio using html,css,and Javascript
+#this is my portfolio
